@@ -1,0 +1,16 @@
+{% extends 'Inventory/base.html' %}
+{% block title %}Delete Group{% endblock %}
+
+{% block body %}
+
+    <form class=form-horizontal action='.' method="POST">
+            {% csrf_token %}
+            <h1>Are you sure, you want to delete </h1>
+            <h1>Group "{{ object.groupname }}"?</h1>
+            <input class="btn btn-default" type="submit" value="Yes" id="confirm-yes"/>
+            <button class="btn btn-default" id="confirm-cancel"><a href = "{% url 'index' %}">Cancel</a></button>
+    </form>
+
+
+
+{% endblock %}

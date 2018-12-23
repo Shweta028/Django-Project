@@ -1,0 +1,23 @@
+{% extends 'Inventory/base.html' %}
+{% block title %}Devices{% endblock %}
+
+{% block body %}
+    <h1>Group ID = {{ object.pk }} </h1>
+    <h1>Group Name: {{ object.groupname }}</h1>
+    <h1>Device Details:</h1>
+
+    <table>
+    	<tr>
+    		<th>Device ID</th>
+    		<th>Device Details</th>
+    	</tr>
+    	{% for dev in object.device_set.all %}
+    		<tr>
+    			<td> {{ dev.id }} </td>
+        		<td> {{dev.hostname}}/ {{dev.IP_Address}} </td>
+        	</tr>
+    	{% endfor %}
+    </table>
+
+
+{% endblock %}

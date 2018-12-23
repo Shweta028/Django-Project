@@ -1,0 +1,24 @@
+{% extends 'Inventory/base.html' %}
+{% block title %}Register {% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<form class=form-horizontal action="" method="post" id="logform">
+                {% csrf_token %}
+				<h1> Create new account </h1>
+                    {% include 'Inventory/form-template.html' %}
+				<div>
+					<button type="submit" class="button btn-success btn-block" id="form-button">Register</button>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+	</div>
+</div>
+
+
+{% endblock %}

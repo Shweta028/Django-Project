@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login </title>
+    <!-- Loading static files, stylesheets and bootstrap files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Inventory/style.css' %}" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'angular.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'angular-route.min.js' %}"></script>
+
+</head>
+
+{% block body %}
+
+{% if messages %}
+	<ul class="messages">
+		{% for msg in messages %}
+		<li style="color: red; font-size:30px; text-align:center">{{ msg }}</li>
+		{% endfor %}
+	</ul>
+{% endif %}
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<form class=form-horizontal action="" method="post" id="logform">
+                {% csrf_token %}
+				<h1> LOG IN </h1>
+                    {% include 'Inventory/form-template.html' %}
+				<div>
+					<button type="submit" class="button btn-success btn-block" id="form-button">Login</button>
+				</div>
+			</form>
+			<a href="{% url 'register' %}"> OR REGISTER </a>
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+	</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Inventory Home{% endblock %}</title>
+    <!-- Loading static files, stylesheets and bootstrap files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'Inventory/style.css' %}" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'angular.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'angular-route.min.js' %}"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse" id="mynavbar">
+    <div class="container-fluid">
+		<div class="navbar-header" disabled>
+            <a class="navbar-brand" href="#"><img src="{% static 'Inventory/images/cube.png' %}"></a>
+	    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavBarToggle">
+					<span class= "icon-bar"></span>
+					<span class= "icon-bar"></span>
+					<span class= "icon-bar"></span>
+				</button>
+		</div>
+    <div class="collapse navbar-collapse navHeaderCollapse" id="NavBarToggle">
+        <ul class="nav navbar-nav navbar-right">
+		    <li class="active"><a href="{% url 'home' %}">Home</a> </li>
+            <li class= "dropdown">
+				<a href="#"class= "dropdown-toggle" data-toggle= "dropdown">Create</a>
+				<ul class= "dropdown-menu">
+					<li><a href="{% url 'create-device' %}">Devices</a></li>
+					<li><a href="{% url 'create-group' %}">Device Groups</a></li>
+				</ul>
+			</li>
+            <li><a href="{% url 'index' %}">Groups</a> </li>
+		    <li><a href="{% url 'device_index' %}">Devices</a> </li>
+		    <li><a href="{% url 'logout' %}">Logout</a> </li>
+        </ul>
+
+
+        <form class="navbar-form navbar-left" role="search" method="GET" action="{% url 'search'  %}">
+            <div class="form-group">
+                <input type="text" class="form-control" name="q" value="{{ request.GET.q }}" placeholder="Search"/>
+                <button type="submit" class="btn btn-default" >Go</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>

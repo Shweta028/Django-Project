@@ -1,0 +1,25 @@
+{% extends 'Inventory/base.html' %}
+{% block title %}Device Groups{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+		<div class="col-md-4 col-sm-4 col-xs-12">
+			<form class=form-container action="" method="post" id="logform">
+                {% csrf_token %}
+				<h1> Add new Device here </h1>
+					{{ form.as_p }}
+				<div class="help">**Help: Hold down and scroll to select multiple</div>
+				<div>
+					<button type="submit" class="button btn-success btn-block" id="form-button">ADD</button>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-4 col-sm-4 col-xs-12"></div>
+	</div>
+</div>
+
+
+{% endblock %}

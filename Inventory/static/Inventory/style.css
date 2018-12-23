@@ -1,0 +1,168 @@
+body{
+    background: white url('images/Networking-background.jpg');
+    color: blue;
+    margin:0;
+	border: 0;
+    }
+
+h1{
+	text-align: center;
+	color: white;
+}
+
+h2{
+	text-align: center;
+	color: red;
+}
+h3{
+	text-align: center;
+	color: blue;
+}
+
+table, th, td {
+   border: 2px solid white;
+   color: white;
+   padding: 2% 2%;
+   font-size: 16px;
+
+}
+
+th {
+ 	background-color: rgb(0, 51, 102);
+ 	color: lightgrey;
+ 	font-size: 20px;
+ 	padding: 3% 3%;
+}
+
+table {
+	margin-right: auto;
+	margin-left: auto;
+	width: 800px;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Arial;
+	align-items: center;
+}
+
+#mynavbar {
+		margin-bottom:0;
+		border-radius: 0;
+		border: 0;
+		background-color: rgb(0, 51, 102);
+		padding: 0.1% 0;
+		font-size: 2rem;
+		color: white
+	}
+
+.navbar-header{
+		color: white;
+		font-size: 2rem;
+		padding:0.1% 1%;
+		text-transform: Uppercase;
+	}
+.navbar-brand{
+		float:left;
+		min-height: 30px;
+		padding: 5px 5px;
+	}
+
+a {
+    align: center;
+}
+
+.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus,
+.navbar-inverse .navbar-nav .active a:hover {
+		background-color:rgb(0, 51, 102);
+	}
+
+.dropdown{
+    position: absolute;
+
+}
+
+ul li ul{
+    display: none;
+    margin:0;
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li ul li{
+    display: inline-block;
+    margin:0;
+}
+
+ul li:hover ul li{
+    display: block;
+}
+
+ul li ul li a{
+    display: block
+}
+
+#logform{
+	border: 2px solid white;
+	border-radius: 4px;
+	padding: 20px 10px;
+	margin-top: 100px;
+	color: blue;
+	font-family: serif;
+	font-size: 16px;
+	background: rgba(0,0,0,0.8);
+	align-items: center;
+}
+
+#formfield{
+    color: blue;
+}
+
+#formlabel{
+    color: white;
+}
+
+#confirm-yes, #confirm-cancel{
+    margin-left:auto;
+	margin-right:auto;
+    align: center;
+
+}
+
+#form-button{
+		background-color: red;
+		border-radius: 4px;
+		color: white;
+		padding: 1% 1%;
+	}
+
+#cancel-button{
+		background-color: red;
+		border-radius: 4px;
+		color: white;
+		padding: 1% 1%;
+	}
+
+.btn-lg{
+		background-color: green;
+		border-radius: 4px;
+		color: white;
+		padding: 1% 1%;
+		align: center;
+		margin-left:auto;
+		margin-right:auto;
+
+	}
+
+btn-default{
+		margin-left:auto;
+		margin-right:auto;
+		position: center;
+        background-color: white;
+		border-radius: 4px;
+		color: black;
+		padding: 1% 1%;
+		align: center;
+
+	}
+
+
+
